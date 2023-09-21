@@ -1,0 +1,210 @@
+
+
+body{
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* background-color: #467691; */
+  /* background-image: radial-gradient(#d8f5f4, transparent 50%);
+  background-repeat: no-repeat; */
+}
+
+header .logo {
+  color: black;
+  font: bolder;
+  font-size: large;
+  font-family: 'Trebuchet MS';
+}
+
+header{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+header nav ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
+
+/* Homepage */
+.slider .list .item .circular-image {
+  width: 20vw;   
+  height: 20vw;  
+  border-radius: 50%;        
+  overflow: hidden;          
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Limit minimum size on smaller screens */
+@media (max-width: 600px) {
+  .slider .list .item .circular-image {
+      width: 100px;
+      height: 100px;
+  }
+}
+
+/* Limit maximum size on larger screens */
+@media (min-width: 1200px) {
+  .slider .list .item .circular-image {
+      width: 400px;
+      height: 400px;
+  }
+}
+
+
+
+:root{
+  --width-circle: 150vw;
+  --radius: calc(100vw / 6);
+}
+.slider{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; 
+  position: relative;
+  background-color: #467691;
+  background-image: radial-gradient(#d8f5f4, transparent 50%);
+  margin-top: -50px;
+}
+.slider .list{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: transform 0.8s;
+  
+}
+.slider .list .item{
+  width: calc(var(--radius) * 2);
+  text-align: center;
+  transform: rotate(45deg);
+  transition: transform 1s;
+}
+
+.slider .list .item.active{
+  transform: rotate(0deg);
+}
+.slider .list .item img{
+  filter: drop-shadow(0 0 20px #000);
+  width: 90%;
+  height: 100%;
+  object-fit: cover;  
+  border-radius: 50%;
+}
+.slider .content{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #eee;
+  width: fit-content;
+}
+.slider .content div:nth-child(2){
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bold;
+  position: relative;
+}
+.slider .content div:nth-child(2)::before{
+  position: absolute;
+  left: 60%;
+  bottom: 50%;
+  width: 80px;
+  height: 80px;
+  content: '';
+}
+.slider .content div:nth-child(1){
+  text-align: left;
+  text-transform: uppercase;
+  transform: translateY(20px);
+}
+
+#prev,
+#next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #eee9;
+  background-color: #eee5;
+  color: #eee;
+  font-size: x-large;
+  font-family: monospace;
+  cursor: pointer;
+  z-index: 15;
+}
+#prev{
+  left: 20px;
+}
+#next{
+  right: 20px;
+}
+
+/* //circle */
+
+.circle{
+  pointer-events: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  -webkit-mask: radial-gradient(var(--radius), transparent 100%, #000);
+  mask: radial-gradient(var(--radius), #0000 98%, #000);
+  backdrop-filter: blur(10px);
+  background: radial-gradient( 
+      calc(var(--radius) + 1px), #eee5 100%, #eee2
+  );
+  
+}
+.circle span{
+  display: block;
+  position: absolute;
+  height: calc(var(--radius) * 2 + 50px);
+  top: 50%;
+  left: 50%;
+  --rotate: 50deg;
+  transform: translate(-50%, -50%) rotate(var(--rotate));
+  text-transform: uppercase;
+  color: #fff;
+  font-size: small;
+  animation: circleRotate 20s linear infinite;
+}
+@keyframes circleRotate{
+  to{
+      transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
+  }
+}

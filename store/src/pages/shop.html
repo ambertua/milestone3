@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Swimwear Shop</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">AMBR SWIM</div>
+        <nav>
+            <ul>
+                <li><a href="/public/index.html">Home</a></li>
+                <li><a href="/src/pages/shop.html">Shop</a></li>
+                <li><a href="/src/pages/cart.html" class="iconCart">Cart</a></li>
+                <li><a href="/src/pages/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="listProduct">
+
+            <div class="item">
+                <img src="/public/image/1.jpeg" alt="">
+                <h2>Jade Suit</h2>
+                <div class="price">$100</div>
+                <button>Add To Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <ul>
+        <li>
+            <img src="images/product1.jpg" alt="Product 1">
+            <p>Product 1 Name - $30</p>
+            <button onclick="addToCart('Product 1', 30)">Add to Cart</button>
+        </li>
+        <!-- ... other products ... -->
+    </ul> -->
+
+    
+    <footer>
+        <p>&copy; 2023 AMBR SWIMWEAR</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
+            let product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+            // Check if product is already in cart
+            let existingProduct = cart.find(p => p.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} added to the cart!`);
+        }
+    </script>
+    <script src="/public/js/scripts.js"></script>
+</body>
+
+</html>
