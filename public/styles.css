@@ -1,13 +1,13 @@
 body{
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #467691;
+    /* background-color: #467691;
     background-image: radial-gradient(#d8f5f4, transparent 50%);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 header .logo {
-    color: white;
+    color: black;
     font: bolder;
     font-size: large;
     font-family: 'Trebuchet MS';
@@ -37,7 +37,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 footer {
@@ -58,7 +58,6 @@ footer {
     max-width: 100%;
 }
 
-/* Limit minimum size on smaller screens */
 @media (max-width: 600px) {
     .slider .list .item .circular-image {
         width: 100px;
@@ -66,7 +65,6 @@ footer {
     }
 }
 
-/* Limit maximum size on larger screens */
 @media (min-width: 1200px) {
     .slider .list .item .circular-image {
         width: 400px;
@@ -205,4 +203,3 @@ footer {
         transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
     }
 }
-
