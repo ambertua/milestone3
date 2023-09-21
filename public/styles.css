@@ -1,6 +1,13 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header .logo {
+    color: white;
+    font: bolder;
+    font-size: large;
+    font-family: 'Trebuchet MS';
 }
 header{
     height: 50px;
@@ -57,8 +64,8 @@ footer {
     height: 100vh;
     overflow: hidden; 
     position: relative;
-    background-color: #17232A;
-    background-image: radial-gradient(#fff3, transparent 50%);
+    background-color: #467691;
+    background-image: radial-gradient(#184d6c, transparent 50%);
     margin-top: -50px;
 }
 .slider .list{
@@ -91,10 +98,10 @@ footer {
     transform: translateX(-50%);
     text-align: center;
     color: #eee;
-    width: max-content;
+    width: fit-content;
 }
 .slider .content div:nth-child(2){
-    font-size: 3rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     font-weight: bold;
