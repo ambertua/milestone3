@@ -1,6 +1,9 @@
 body{
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #467691;
+    background-image: radial-gradient(#d8f5f4, transparent 50%);
+    background-repeat: no-repeat;
 }
 
 header .logo {
@@ -46,13 +49,31 @@ footer {
 
 
 /* Homepage */
-.circular-image {
-    width: 100px;              
-    height: 200px;            
+.slider .list .item .circular-image {
+    width: 20vw;   
+    height: 20vw;  
     border-radius: 50%;        
     overflow: hidden;          
-    display: inline-block;     
+    display: inline-block;
+    max-width: 100%;
 }
+
+/* Limit minimum size on smaller screens */
+@media (max-width: 600px) {
+    .slider .list .item .circular-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Limit maximum size on larger screens */
+@media (min-width: 1200px) {
+    .slider .list .item .circular-image {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 
 
 :root{
@@ -65,7 +86,7 @@ footer {
     overflow: hidden; 
     position: relative;
     background-color: #467691;
-    background-image: radial-gradient(#184d6c, transparent 50%);
+    background-image: radial-gradient(#d8f5f4, transparent 50%);
     margin-top: -50px;
 }
 .slider .list{
@@ -84,12 +105,16 @@ footer {
     transform: rotate(45deg);
     transition: transform 1s;
 }
+
 .slider .list .item.active{
     transform: rotate(0deg);
 }
 .slider .list .item img{
-    width: 90%;
     filter: drop-shadow(0 0 20px #000);
+    width: 90%;
+    height: 100%;
+    object-fit: cover;  
+    border-radius: 50%;
 }
 .slider .content{
     position: absolute;
@@ -120,14 +145,6 @@ footer {
     text-transform: uppercase;
     transform: translateY(20px);
 }
-/* .slider .content button{
-    border: 1px solid #eee5;
-    background: transparent;
-    color: #eee;
-    letter-spacing: 5px;
-    border-radius: 20px;
-    padding: 10px 20px;
-} */
 
 #prev,
 #next{
