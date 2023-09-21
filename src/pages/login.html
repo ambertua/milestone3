@@ -20,19 +20,35 @@
     </header>
         </nav>
         <div class="login">
-        <div class="form-box login">
-        <h2>Login</h2>
-        <form action="#">
-            <div class="input-box">
-            <input type="text" name="username" placeholder="Username" required>
-            </div>
-            <div class="input-box">
-            <input type="password" name="password" placeholder="Password" required>
-            </div>
-            <input type="submit" value="Login">
-        </form>
-        <p>New here? <a href="signup.html">Signup</a></p>
-        </div>
+   
+            <form action="" class="login__form">
+               <h1 class="login__title">Login</h1>
+   
+               <div class="login__inputs">
+                  <div class="login__box">
+                     <input type="email" placeholder="Email ID" required class="login__input">
+                     <i class="ri-mail-fill"></i>
+                  </div>
+   
+                  <div class="login__box">
+                     <input type="password" placeholder="Password" required class="login__input">
+                     <i class="ri-lock-2-fill"></i>
+                  </div>
+               </div>
+   
+               <div class="login__check">
+                  <div class="login__check-box">
+                     <input type="checkbox" class="login__check-input" id="user-check">
+                     <label for="user-check" class="login__check-label">Remember me</label>
+                  </div>
+               </div>
+   
+               <button type="submit" class="login__button">Login</button>
+   
+               <div class="login__register">
+                  Don't have an account? <a href="/src/pages/signup.html">Register</a>
+               </div>
+            </form>
         </div>
         <footer>
             <p>&copy; 2023 AMBR SWIMWEAR</p>
