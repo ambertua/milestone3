@@ -1,4 +1,23 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+
 .login {
-    width: 100vw;
-    height: 100vh;
+
+    position: relative;
+    width: 300px;
+    height: 340px;
+    border: 2px solid;
+    border-radius: 20px;
+    backdrop-filter: blur 20px;
+    box-shadow: 0 50px 50px #467691;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
 }

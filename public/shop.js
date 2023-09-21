@@ -22,7 +22,7 @@ let products = [
     },
     {
         id: 2,
-        name: 'Red Hot Chili Suit',
+        name: 'Red Hot Suit',
         image: '2.webp',
         price: 100
     },
