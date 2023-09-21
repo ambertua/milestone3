@@ -1,43 +1,6 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 10px;
-    background-color: #333;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-footer {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-.circle-img {
-    width: 300px;              /* Adjust this for desired size */
-    height: 300px;             /* Should be the same as width for a circle */
-    border-radius: 50%;        /* Makes the image circular */
-    object-fit: cover;         /* Ensures images are resized to cover the element, preserving their aspect ratio */
-    overflow: hidden;          /* Ensures that anything outside the circle is hidden */
-    display: inline-block; 
-}
-
 body{
     margin: 0;
-    font-family: Poppins;
+    font-family: Arial, Helvetica, sans-serif;
 }
 header{
     height: 50px;
@@ -53,9 +16,38 @@ header nav ul{
     padding: 0;
     margin: 0;
     list-style: none;
+    list-style-type: none;
     display: flex;
     gap: 30px;
 }
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
+
+
+/* Homepage */
+.circular-image {
+    width: 100px;              
+    height: 200px;            
+    border-radius: 50%;        
+    overflow: hidden;          
+    display: inline-block;     
+}
+
+
 :root{
     --width-circle: 150vw;
     --radius: calc(100vw / 6);
@@ -102,7 +94,7 @@ header nav ul{
     width: max-content;
 }
 .slider .content div:nth-child(2){
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     font-weight: bold;
@@ -115,23 +107,21 @@ header nav ul{
     width: 80px;
     height: 80px;
     content: '';
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .slider .content div:nth-child(1){
     text-align: left;
     text-transform: uppercase;
     transform: translateY(20px);
 }
-.slider .content button{
+/* .slider .content button{
     border: 1px solid #eee5;
     background: transparent;
     color: #eee;
-    font-family: Poppins;
     letter-spacing: 5px;
     border-radius: 20px;
     padding: 10px 20px;
-}
+} */
+
 #prev,
 #next{
     position: absolute;
@@ -191,6 +181,5 @@ header nav ul{
         transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
     }
 }
-
 
 
