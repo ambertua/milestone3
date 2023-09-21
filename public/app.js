@@ -42,6 +42,3 @@ textCircle.forEach((value, key) => {
     newSpan.style.setProperty('--rotate', rotateThisSpan + 'deg');
     circle.appendChild(newSpan); 
 });
-
-// Carousel.js
-export default function Carousel() { }
