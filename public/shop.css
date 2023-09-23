@@ -110,6 +110,7 @@ body{
     transition: 0.5s;
     z-index: 11;
     overflow-y: auto;
+    padding-bottom: 70px;
 }
 .active .cart{
     left: calc(100% - 500px);
@@ -127,11 +128,16 @@ body{
     align-items: center;
 }
 .cart .checkout{
-    position: sticky;
+    position: sticky; 
     bottom: 0;
-    width: 100%;
+    left: 0; 
+    width: 500px; 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    z-index: 12;
+}
+.active .cart .checkout {
+    left: 0; 
 }
 .cart .checkout div{
     background-color: #ffffff;
@@ -152,11 +158,17 @@ body{
     grid-template-columns: 100px repeat(3, 1fr);
     color: white;
     row-gap: 10px;
+    margin-bottom: 5px;
 }
+.listCart li:last-child {
+    margin-bottom: 50px;
+}
+
 .listCart li div{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .listCart li img{
     width: 90%;
