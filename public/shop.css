@@ -3,6 +3,41 @@ body{
     font-family: system-ui;
 }
 
+.black-underline-page header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.black-underline-page nav ul li a.active::before {
+    background-color: black;
+}
+
+.black-underline-page header nav ul li a.active::before {
+    width: 100%;
+}
+
+.black-underline-page nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0); 
+    transition: width 0.3s; 
+}
+
+.black-underline-page nav ul li a:hover::before {
+    width: 100%;
+}
+
+.black-underline-page nav ul li a:hover {
+    opacity: 0.6;
+}
+
 .container {
     width: 90%; 
     max-width: 1000px; 
@@ -105,16 +140,16 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    cursor: pointer;
 }
 .cart .checkout div:nth-child(2){
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 .listCart li{
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
+    color: white;
     row-gap: 10px;
 }
 .listCart li div{
