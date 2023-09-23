@@ -73,6 +73,7 @@ body{
     height: 100vh;
     transition: 0.5s;
     z-index: 11;
+    overflow-y: auto;
 }
 .active .cart{
     left: calc(100% - 500px);
@@ -90,12 +91,11 @@ body{
     align-items: center;
 }
 .cart .checkout{
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
 .cart .checkout div{
     background-color: #ffffff;
