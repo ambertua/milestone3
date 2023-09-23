@@ -70,6 +70,8 @@ function addToCart(key){
         // copy product form list to list cart
         listCarts[key] = JSON.parse(JSON.stringify(products[key]));
         listCarts[key].quantity = 1;
+    } else {
+        listCarts[key].quantity += 1;
     }
     reloadCart();
 }
