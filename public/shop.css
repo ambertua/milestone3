@@ -38,7 +38,7 @@
     max-width: 1000px; 
     margin: auto;
     transition: 0.5s;
-    height: 100vh;
+
 }
 
 .shopping{
@@ -113,7 +113,7 @@
 }
 .active .container{
    transform: translateX(-200px);
-   filter: blur(2px);
+   filter: blur(10px);
 }
 .cart h1{
     color: white;
