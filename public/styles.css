@@ -7,7 +7,7 @@ body{
 }
 
 header .logo {
-    color: black;
+    color: white;
     font: bolder;
     font-size: large;
     font-family: 'Trebuchet MS';
@@ -37,7 +37,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 footer {
@@ -45,6 +45,7 @@ footer {
     background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
+    z-index: 2;
 }
 
 
