@@ -38,7 +38,7 @@
     max-width: 1000px; 
     margin: auto;
     transition: 0.5s;
-
+    height: 100%;
 }
 
 .shopping{
